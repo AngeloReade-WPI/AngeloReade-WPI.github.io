@@ -3,35 +3,230 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Angelo Reade — Portfolio</title>
+  <title>Angelo Reade | Robotics Engineering</title>
+  <meta name="description" content="Angelo Reade — Robotics Engineering student at Worcester Polytechnic Institute. Portfolio of robotics and CAD projects." />
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 48px; line-height: 1.5; }
-    .wrap { max-width: 900px; margin: 0 auto; }
-    h1 { margin: 0 0 8px; font-size: 40px; }
-    p { margin: 0 0 16px; }
-    .links a { margin-right: 14px; }
-    .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    :root {
+      --text:#0f172a;
+      --muted:#475569;
+      --link:#2563eb;
+      --border:#e2e8f0;
+      --bg:#ffffff;
+      --chip:#f1f5f9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 48px 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .profile-pic {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin: 0 0 8px;
+    }
+
+    .tagline {
+      margin: 0 0 14px;
+      color: var(--muted);
+      max-width: 65ch;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 16px;
+      text-decoration: none;
+      color: var(--link);
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin: 32px 0 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      background: #fff;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 14px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .chip {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--chip);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .actions a {
+      text-decoration: none;
+      color: var(--link);
+      font-weight: 600;
+      margin-right: 10px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 44px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <h1>Angelo Reade </h1>
-    <p>Robotics Engineering student. Projects in robotics, CAD, and software.</p>
 
-    <div class="links">
-      <a href="https://github.com/yourusername">GitHub</a>
-      <a href="#" target="_blank">Resume (add link)</a>
-      <a href="mailto:you@example.com">Email</a>
+    <!-- HEADER -->
+    <header>
+      <img
+        src="angeloreadeprofilepicture.jpeg"
+        alt="Photo of Angelo Reade"
+        class="profile-pic"
+      />
+
+      <div>
+        <h1>Angelo Reade</h1>
+        <p class="tagline">
+          Robotics Engineering student at Worcester Polytechnic Institute (BS/MS).
+          Focused on robotics systems, CAD-driven mechanical design, and clean technical documentation.
+        </p>
+        <div class="links">
+          <a href="https://github.com/AngeloReade-WPI">GitHub</a>
+          <a href="#" target="_blank">Resume</a>
+          <a href="mailto:your-email@wpi.edu">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROJECTS -->
+    <h2 class="section-title">Projects</h2>
+    <div class="grid">
+
+      <article class="card">
+        <h3>Fruit-Picking Robot</h3>
+        <p>
+          Robotic system designed for automated fruit collection, including mechanical design,
+          integration, and control logic.
+        </p>
+        <ul class="chips">
+          <li class="chip">Robotics</li>
+          <li class="chip">CAD</li>
+          <li class="chip">Controls</li>
+        </ul>
+        <div class="actions">
+          <a href="#">Project page</a>
+          <a href="#">Repository</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Hole Puncher CAD Assembly</h3>
+        <p>
+          Fully modeled hole puncher assembly with moving components, focusing on manufacturability
+          and clear part relationships.
+        </p>
+        <ul class="chips">
+          <li class="chip">CAD</li>
+          <li class="chip">Assembly</li>
+          <li class="chip">Mechanism Design</li>
+        </ul>
+        <div class="actions">
+          <a href="#">Project page</a>
+          <a href="#">Repository</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Remote-Control Line-Following Robot</h3>
+        <p>
+          Mobile robot capable of both remote control and autonomous line following using onboard
+          sensing and programmed control logic.
+        </p>
+        <ul class="chips">
+          <li class="chip">Robotics</li>
+          <li class="chip">Sensors</li>
+          <li class="chip">Programming</li>
+        </ul>
+        <div class="actions">
+          <a href="#">Project page</a>
+          <a href="#">Repository</a>
+        </div>
+      </article>
+
     </div>
 
-    <h2>Projects</h2>
-
-    <div class="card">
-      <h3>Project Name</h3>
-      <p>One sentence: what it is + what you did + what tools you used.</p>
-      <a href="#">Project page</a> • <a href="#">Repo</a>
-    </div>
-
+    <footer>
+      © <span id="year"></span> Angelo Reade • Built with GitHub Pages
+    </footer>
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
